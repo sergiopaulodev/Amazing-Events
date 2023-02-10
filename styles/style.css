@@ -58,4 +58,13 @@ h1{
     color: grey;
 }
 
+footer >a {
+    text-decoration: none;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+}
+
 
