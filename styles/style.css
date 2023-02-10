@@ -1,0 +1,37 @@
+:root{
+    font-size: 14px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#header{
+    display: flex;
+    align-items: baseline;
+    background-color: grey;
+}
+#logo{
+    width: 25%;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: black;
+}
+
+#navbar > button{
+    width: 6rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+
+}
+
+
+
