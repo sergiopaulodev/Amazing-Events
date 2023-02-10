@@ -22,16 +22,19 @@
 }
 
 #navbar a{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 1rem;
     text-decoration: none;
     color: black;
-}
-
-#navbar > button{
-    width: 6rem;
-    margin-right: 1rem;
+    padding: 1rem;
     margin-top: 2rem;
+    text-align: center;
 
 }
+
 
 #title{
     display: flex;
