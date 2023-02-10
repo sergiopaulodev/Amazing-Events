@@ -5,6 +5,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body{
+    background: linear-gradient(rgba(213, 214, 205, 0.5), rgba(129, 130, 109, 0.75));
+    background-size: cover;
+    /* background-image: url(../images/bg-3.jpg);
+    background-size: cover; */
 }
 
 #header{
@@ -70,4 +78,50 @@ footer{
     flex-direction: row;
 }
 
+.check-search{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4rem;
+}
 
+#checkbox{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 68vh;
+    align-items: center;
+}
+
+#card{
+    border: 1px solid black;
+    box-shadow: 12px 12px 2px 1px;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 50%;
+}
+
+figure > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+figure{
+    width: 100%;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+}
