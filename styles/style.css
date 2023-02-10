@@ -33,5 +33,29 @@
 
 }
 
+#title{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+#title > a{
+    text-decoration: none; 
+    color: black;
+    width: 6rem
+}
+
+#title > #disabled{
+    pointer-events: none
+}
+#title > #disabled > svg{
+    color: grey;
+}
 
 
