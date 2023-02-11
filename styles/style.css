@@ -1,5 +1,10 @@
 :root{
-    font-size: 14px;
+    font-size: 15px;
+    /* --border-color:linear-gradient(to right,
+    tomato 0%,
+    gold 100%
+    );
+    --card-color: #222; */
 }
 *{
     padding: 0;
@@ -104,24 +109,78 @@ footer{
     flex-direction: column;
     width: 20rem;
     height: 50%;
+    /* background: var(--border-color);
+    aspect-ratio: 10/16;
+    padding: 5px;
+    border-radius: 16px; */
 }
 
 figure > img {
-    width: 100%;
+    width: 90%;
     object-fit: cover;
+    
 }
 
 figure{
     width: 100%;
+    text-align-last: center;
+    padding-top: 1rem;
+    /* background:var(--card-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; */
+
 }
 
 .card-info{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background:var(--card-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; */
+
 }
 
 .price{
     display: flex;
     flex-direction: row;
+    gap:2rem
+    
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: stretch;
+    width: 35%;
+    gap: 2rem;
+
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-contact{
+    display: flex;
+    justify-content: center;
+}
+
+.main-contact{
+    height: 75vh;
+}
+
+#name{
+    height: 3rem;
+}
+#email{
+    height: 3rem;
+}
+
+#submit{
+    height: 3rem;
 }
