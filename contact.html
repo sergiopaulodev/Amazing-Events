@@ -10,8 +10,8 @@
     <title>Contact</title>
 </head>
 <body>
-    <header>
-        <div class="container-fluid">
+    <!-- Header -->
+    <header class="container-fluid">
             <div class="row" id="header">
                 <figure class="col-7">
                     <img src="./images/LogoAmazingEvents.png" alt="logo Amazing Events" id="logo">
@@ -20,62 +20,70 @@
                     <a href="./index.html">Home</a> 
                     <a href="./u-events.html">Upcoming Events</a>   
                     <a href="./p-events.html">Past Events</a>   
-                    <a href="./contact.html">conctact</a>   
-                    <a href="./stats.html">stats</a>    
+                    <a href="./contact.html">Conctact</a>   
+                    <a href="./stats.html">Stats</a>    
                 </nav>
             </div>
-        </div>
+            <div class="row" id="title">
+                <a href="./p-events.html" class="col-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </a>
+                <h1 class="col-10">Contact</h1>
+                <a href="./stats.html" class="col-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </a>
+            </div>
     </header>
 
-    <div class="row" id="title">
-        <a href="./p-events.html" class="col-1">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-        </a>
-        <h1 class="col-10">Contact</h1>
-        <a href="./stats.html" class="col-1">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-        </a>
-    </div>
+    
 
-
+    <!-- Main: Contact Form -->
     <main class="main-contact">
         <div class="container-contact">
-            <div class="contact">
-                <label >
+
+            <form action="./show-data.html" method="GET" class="contact">
+
+                <label class="label-contact">
                     <span>Name:</span>
-                    <input type="text" id="name">
+                    <input type="text" name="name" id="name">
                 </label>
-                <label>
+
+                <label class="label-contact">
                     <span>Email:</span>
-                    <input type="email" id="email">
+                    <input type="email" name="email" id="email">
                 </label>
-                <label>
+
+                <label class="label-contact">
                     <span>Message: </span>
-                    <textarea name="" id="message" cols="30" rows="10"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
                 </label>
+
                 <input type="submit" id="submit">
-            </div>
+            </form>
         </div>
 
     </main>
  
  
- 
+    <!-- Footer -->
     <footer class="container-fluid">
         <div class="col-4">            
             <a><img src="./images/instagram-icon.svg" alt="Instagram"></a>
             <a><img src="./images/facebook-icon.svg" alt="Facebook"></a>
-            <a><img src="./images/whatsapp-icon.gif" alt="Whatsapp"></a>
+            <a><img src="./images/whatsapp-icon.svg" alt="Whatsapp" id="whatsapp-icon"></a>
         </div>
+
+        <!-- Copy Right: Sergio Torres Fernández -->
+
         <div class="d-flex flex-row col-4 justify-content-center">
-            <img src="./images/s.png" alt="s" style="object-fit: cover; height: 1.5rem;"><p>ergio</p>
-            <img src="./images/p.png" alt="p" style="object-fit: cover; height: 1.5rem;"><p>aulo</p>
+            <img src="./images/s.png" alt="s"><p>ergio</p>
+            <img src="./images/p.png" alt="p"><p>aulo</p>
         </div>
-        <p class="col-4" style="display: flex; justify-content: flex-end;">Cohort</p>
+        <p class="col-4">Cohort</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>  
