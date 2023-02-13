@@ -15,7 +15,7 @@
 
 body{
     background: linear-gradient(rgba(213, 214, 205, 0.5), rgba(79, 83, 2, 0.75));
-    height: 100vh;
+    height: 100%;
     /* background-size: cover; */
     /* background-image: url(../images/bg-3.jpg);
     background-size: cover; */
@@ -202,7 +202,7 @@ footer > p{
 }
 
 .main-contact{
-    height: 77vh;
+    height: 75vh;
 }
 
 #name{
@@ -420,13 +420,237 @@ table{
     footer{
         margin-top: 1rem;
     }
+
+    .main-contact{
+        height: 90vh;
+    }
+
+    table{
+        width: 90%;
+    }
+    th{
+        font-size: .7rem;
+    }
+    td{
+        font-size: 1rem;
+    }
+
+    .main-stats{
+        height: 100%;
+    }
+    th, td{
+        padding-left: .2rem;
+        padding-right: .2rem;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
     
 
 
 }
 
+/* Revisar y terminar 480 - 767 : CHECKED*/
 @media only screen and (min-width: 480px) and (max-width: 767px){
+    body{
+        height: 100%;
+    }
+    #header{
+        display: flex;
+        flex-direction: column;
+    }
     #title{
         flex-wrap: nowrap;
     }
+     #logo{
+        width: 70%;
+    }
+    #navbar{
+        display: none;
+    }
+
+    .respmenu{
+        display: flex;
+        flex-direction: column;
+    }
+    .respmenu a {
+        color: black;
+        text-decoration: none;
+        list-style: none;
+
+        display: block;
+        padding: .8rem 1.5rem;
+        border-bottom: 2px solid #456789;
+        max-width: 12rem;
+        /* background: grey; */
+        font-variant: small-caps;
+      }
+      .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+        position: absolute;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        right: -19rem;
+        top: -6.5rem;
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+      }
+      .respmenu .fa-bars, .respmenu .fa-times {
+        font-size: 4rem;
+        pointer-events: none;
+      }
+
+      .respmenu input[type="checkbox"] {
+        opacity: 0;
+      }
+      .respmenu {
+        color: white;
+        position: relative;
+        background: tan;
+        min-height: 3rem;
+      }
+      .respmenu nav {
+        display: none;
+      }
+      .respmenu input:checked ~ nav {
+        display: block;
+      }
+      .respmenu input:checked ~ .fa-bars {
+        display: none;
+      }
+      .respmenu input:not(:checked) ~ .fa-times {
+        display: none;
+      }
+
+      .fa-bars > img {
+        width: 3rem;
+      }
+      .fa-times > img{
+        width: 3rem;
+      }
+      #title > a {
+        width: 3rem;
+      }
+      h1{
+        flex: 0 0 auto;
+        width: 66.66666667%!important;
+      }
+
+      .check-search{
+        margin-top: 2rem;
+      }
+      label{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+      #checkbox {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      #search{
+        width: 45%;
+        gap: 1rem;
+        background: none;
+    
+    }
+    #title{
+        margin-top: 1rem;
+        flex-wrap: nowrap;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: auto;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    th{
+        font-size: 1rem;
+    }
+    td{
+        font-size: .8rem;
+    }
+    table{
+        width: 90%;
+    }
+    .main-contact{
+        height: 78vh;
+    }
+
+    #whatsapp-icon, .col-4 > a > img{
+        width: 2rem;
+    }
+
+    footer{
+        margin-top: 1rem;
+    }
+
+
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    
+    body{
+        height: 100% !important;
+    }
+    #header{
+        flex-direction: column;
+        align-content: center;
+    }
+    #logo{
+        width: 40%;
+    }
+    h1{
+        flex: 0 0 auto;
+        width: 66.66666667%!important;
+      }
+
+    #navbar{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #header > figure{
+        width: 100%;
+    }
+    .check-search{
+        margin-top: 3rem;
+    }
+
+    #checkbox {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+    #search{
+        background:none;
+    }
+
+    .cards{
+        flex-wrap: wrap;
+        height: 85vh;
+        margin-bottom: 1rem;
+    }
+    th{
+        font-size: 1.2rem;
+    }
+    td{
+        font-size: 1rem;
+    }
+    table{
+        width: 90%;
+    }
+    .main-contact{
+        height: 78vh;
+    }
+
+}
+
