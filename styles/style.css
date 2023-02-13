@@ -14,8 +14,8 @@
 }
 
 body{
-    background: linear-gradient(rgba(213, 214, 205, 0.5), rgba(129, 130, 109, 0.75));
-    background-size: cover;
+    background: linear-gradient(rgba(213, 214, 205, 0.5), rgba(79, 83, 2, 0.75));
+    /* background-size: cover; */
     /* background-image: url(../images/bg-3.jpg);
     background-size: cover; */
 }
@@ -23,7 +23,7 @@ body{
 #header{
     display: flex;
     align-items: baseline;
-    background-color: grey;
+    background-color: tan;
 }
 #logo{
     width: 25%;
@@ -94,6 +94,10 @@ footer{
     justify-content: space-around;
 }
 
+#search{
+    background-color: grey;
+}
+
 .cards{
     display: flex;
     flex-direction: row;
@@ -102,13 +106,13 @@ footer{
     align-items: center;
 }
 
-#card{
-    border: 1px solid black;
-    box-shadow: 12px 12px 2px 1px;
+.cards > .col-3{
+    border: 3px solid black;
+    /* box-shadow: 12px 12px 2px 1px; */
     display: flex;
     flex-direction: column;
     width: 20rem;
-    height: 50%;
+    /* height: 50%; */
     /* background: var(--border-color);
     aspect-ratio: 10/16;
     padding: 5px;
@@ -146,8 +150,28 @@ figure{
 .price{
     display: flex;
     flex-direction: row;
-    gap:2rem
-    
+    gap:2rem   
+}
+
+.price > a{
+    text-decoration: none;
+    color: black;
+    background-color: grey;
+    border: 1px solid tomato;
+    box-shadow: 1px 2px 3px;
+    margin-bottom: 1rem;
+}
+
+#whatsapp-icon{
+    width: 40px;
+}
+
+footer > div > img{
+    object-fit: cover; height: 1.5rem;
+}
+
+footer > p{
+    display: flex; justify-content: flex-end;
 }
 
 .contact{
@@ -160,7 +184,9 @@ figure{
 
 }
 
-label{
+
+
+.label-contact{
     display: flex;
     flex-direction: column;
 }
@@ -183,4 +209,76 @@ label{
 
 #submit{
     height: 3rem;
+}
+
+tr, th, td{
+    border: 1px solid black;
+}
+
+.main-stats{
+    height: 75vh;
+}
+
+.container-table{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    width: 60%;
+}
+
+.container-details{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.info-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.info-details > h1{
+    font-size: 4rem;
+}
+
+.info-details > p{
+    font-size: 2rem;
+}
+
+#img-details{
+    width: 100%;
+    object-fit: cover;
+    padding: 4rem;
+}
+
+#fig-details{
+    width: 75%;
+    text-align-last: center;
+}
+
+
+#main-details{
+    height: 84vh;
+}
+
+#cont-fig-details{
+    width: 50vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+#cont-info-details{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    background-color: yellow;
 }

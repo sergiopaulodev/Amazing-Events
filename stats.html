@@ -7,11 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <title>stats</title>
+    <title>Stats</title>
 </head>
 <body>
-    <header>
-        <div class="container-fluid">
+
+    <!-- Header -->
+    <header class="container-fluid">
             <div class="row" id="header">
                 <figure class="col-7">
                     <img src="./images/LogoAmazingEvents.png" alt="logo Amazing Events" id="logo">
@@ -20,44 +21,118 @@
                     <a href="./index.html">Home</a> 
                     <a href="./u-events.html">Upcoming Events</a>   
                     <a href="./p-events.html">Past Events</a>   
-                    <a href="./contact.html">conctact</a>   
-                    <a href="./stats.html">stats</a>    
+                    <a href="./contact.html">Conctact</a>   
+                    <a href="./stats.html">Stats</a>    
                 </nav>
-            </div>
+        </div>
+        <div class="row" id="title">
+            <a href="./contact.html" class="col-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </a>
+            <h1 class="col-10">Stats</h1>
+            <a class="col-1" id="disabled" aria-disabled="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </a>
         </div>
     </header>
 
-    <div class="row" id="title">
-        <a href="./contact.html" class="col-1">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-        </a>
-        <h1 class="col-10">Stats</h1>
-        <a class="col-1" id="disabled" aria-disabled="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-        </a>
-    </div>
+    <!-- Main -->
+    <main class="main-stats">
+        <!-- TABLA -->
+        <div class="container-table">
+            <table>
+                <tbody>
+                    <tr>
+                        <th colspan="3">Events statistics</th>
+                    </tr>
+                    <tr>
+                        <td>Events with the highest percentage of attendance</td>
+                        <td>Events with the lowest percentage of attendance</td>
+                        <td>Events with larger capacity</td>
+                    </tr>
+                    <tr>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Upcoming events statistics by category</th>
+                    </tr>
+                    <tr>
+                        <td>Categories</td>
+                        <td>Revenues</td>
+                        <td>Percentage of attendance</td>
+                    </tr>
+                    <tr>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                    </tr>
+                    <tr>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                    </tr>
+                    <tr>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Past events statistics by category</th>
+                    </tr>
+                    <tr>
+                        <td>Categories</td>
+                        <td>Revenues</td>
+                        <td>Percentage of attendance</td>
+                    </tr>
+                    <tr>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                    </tr>
+                    <tr>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                    </tr>
+                    <tr>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                    </tr>
+                    <tr>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                    </tr>
+                    <tr>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                        <td>Table data vacio</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
-
-
-
-
-
- 
+    <!-- Footer -->
     <footer class="container-fluid">
         <div class="col-4">            
             <a><img src="./images/instagram-icon.svg" alt="Instagram"></a>
             <a><img src="./images/facebook-icon.svg" alt="Facebook"></a>
-            <a><img src="./images/whatsapp-icon.gif" alt="Whatsapp"></a>
+            <a><img src="./images/whatsapp-icon.svg" alt="Whatsapp" id="whatsapp-icon"></a>
         </div>
+        <!-- Copy Right: Sergio Torres Fernández -->
         <div class="d-flex flex-row col-4 justify-content-center">
-            <img src="./images/s.png" alt="s" style="object-fit: cover; height: 1.5rem;"><p>ergio</p>
-            <img src="./images/p.png" alt="p" style="object-fit: cover; height: 1.5rem;"><p>aulo</p>
+            <img src="./images/s.png" alt="s"><p>ergio</p>
+            <img src="./images/p.png" alt="p"><p>aulo</p>
         </div>
-        <p class="col-4" style="display: flex; justify-content: flex-end;">Cohort</p>
+        <p class="col-4">Cohort</p>
     </footer>
 
 
