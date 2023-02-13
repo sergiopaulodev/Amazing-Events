@@ -18,7 +18,6 @@ body{
     /* background-size: cover; */
     /* background-image: url(../images/bg-3.jpg);
     background-size: cover; */
-    height: 100Vh;
 }
 
 #header{
@@ -198,7 +197,7 @@ footer > p{
 }
 
 .main-contact{
-    height: 77vh;
+    height: 75vh;
 }
 
 #name{
@@ -214,19 +213,10 @@ footer > p{
 
 tr, th, td{
     border: 1px solid black;
-    padding: .5rem;
 }
-
-th{
-    font-size: 1.8rem;
-}
-td{
-    font-size: 1.3rem;
-}
-
 
 .main-stats{
-    height: 77vh;
+    height: 75vh;
 }
 
 .container-table{
@@ -291,10 +281,4 @@ table{
     display: flex;
     align-items: center;
     background-color: yellow;
-}
-
-/* MEDIA QUERY */
-
-@media only screen and (min-width: 320px) and (max-width: 479px){
-
 }
