@@ -68,7 +68,8 @@ h1{
 #title > a{
     text-decoration: none; 
     color: black;
-    width: 6rem
+    width: 6rem;
+    cursor: pointer;
 }
 
 #title > #disabled{
@@ -376,7 +377,7 @@ table{
       }
       h1{
         flex: 0 0 auto;
-        width: 66.66666667%;
+        width: 66.66666667%!important;
       }
 
       .check-search{
@@ -401,6 +402,7 @@ table{
     }
     #title{
         margin-top: 1rem;
+        flex-wrap: nowrap;
     }
     .cards{
         display: flex;
@@ -424,5 +426,7 @@ table{
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px){
-    
+    #title{
+        flex-wrap: nowrap;
+    }
 }
