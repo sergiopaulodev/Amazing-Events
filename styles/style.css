@@ -1,0 +1,38 @@
+li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    justify-content: space-between;
+    font-size: .8rem;
+}
+body {
+    background: linear-gradient(rgba(169, 240, 209, 0.5),rgba(255, 126, 107, 0.8));
+}
+
+#p-card-1 {
+    width: 15rem;
+    line-height: 1.5rem;
+}
+#p-card-8, #p-card-9, #p-card-10, #p-card-11, #p-card-13 {
+    width: 18rem;
+}
+#bg-container > div {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.45);
+}
+#bg-container > div:hover {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.85);
+    transition: 0.4s ease;
+}
+nav > a:hover {
+    background-color: black;
+    color: aliceblue;
+    transition: 0.4s ease;
+}
+
+tr, th, td{
+    border: 1px solid black;
+    padding: .5rem;
+}
+#whatsapp-icon {
+    width: 38px;
+
+}

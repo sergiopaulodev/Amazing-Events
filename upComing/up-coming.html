@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Probando tailwind</title>
+</head>
+<body>
+    <header>
+    <div class="flex flex-row justify-between items-center bg-gradient-to-r from-amber-100 to-pink-900">
+        <a href="./index.html">
+            <figure>
+                <img src="../image/LogoAmazingEvents.png" alt="Logo Amazing Events" class="w-96">
+            </figure>
+        </a>
+        <nav class="flex flex-row gap-4 mr-8">
+            <a href="../index/index.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Home</a> 
+            <a href="../upComing/up-coming.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Upcoming Events</a>
+            <a href="../pastEvents/past-events.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Past Events</a>   
+            <a href="../contact/contact.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Conctact</a>   
+            <a href="../stats/stats.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Stats</a>    
+        </nav>
+    </div>
+    <div id="title" class="flex flex-row justify-between mt-4">
+        <a href="../index/index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 ease-linear duration-300 hover:w-9">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+        </a>
+        <h1 class="text-3xl uppercase font-medium">Up coming Events</h1>
+        <a href="../pastEvents/past-events.html">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 ease-linear duration-300 hover:w-9">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </a>
+    </div>
+    <div class="flex flex-row justify-between gap-10 mt-4">
+
+        <!-- checkbox area -->
+        <div class="flex w-3/5 justify-around" id="checkbox">
+            <label>
+                <input type="checkbox" id="cbox1" value="cat-1">
+                <span>Catergoria 1</span>
+            </label>
+            <label>
+                <input type="checkbox" id="cbox2" value="cat-2">
+                <span>Catergoria 2</span>
+            </label>
+            <label>
+                <input type="checkbox" id="cbox3" value="cat-3">
+                <span>Catergoria 3</span>
+            </label>
+            <label>
+                <input type="checkbox" id="cbox4" value="cat-4">
+                <span>Catergoria 4</span>
+            </label>
+        </div>
+        <!-- Search area -->
+        <label class="flex flex-row justify-between w-2/5 gap-2" id="search">
+            <input type="search" class="w-full ease-in duration-300 hover:p-2">
+            <span class="ease-in duration-300 hover:bg-slate-500 hover:p-2">
+                <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20">
+                    <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </span>
+        </label>
+    </div>
+    </header>
+        <div id="bg-container" class="mt-10 mb-10 gap-4 flex flex-wrap justify-center">
+            <!-- Card 1 -->
+            <div class="bg-neutral-400 flex justify-center hover:p-4 hover:rounded-2xl hover:bg-gradient-to-r from-pink-900 to-pink-300">
+                <div class="bg-rose-300 w-80 h-96 rounded-full">
+                    <figure>
+                        <img id="img-0" class="max-w-2xs">
+                    </figure>
+                    <div id="info-card" class="flex flex-col items-center leading-loose">
+                        <h3 id="title-card-0" class="text-2xl"></h3>
+                        <p id="p-card-0" class="text-center text-xs w-60 leading-6"></p>
+                        <div id="price-more" class="flex justify-center gap-4 items-center">
+                            <p id="price-0"></p>
+                            <a href="" id="more-0">
+                                <p class="bg-stone-300 hover:bg-slate-800 ease-linear duration-300 hover:text-stone-300 rounded-full p-1">see more</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-neutral-400 flex justify-center hover:p-4 hover:rounded-2xl hover:bg-gradient-to-r from-pink-900 to-pink-300">
+                <div class="bg-rose-300 w-80 h-96 rounded-full">
+                    <figure>
+                        <img id="img-1" class="max-w-2xs">
+                    </figure>
+                    <div id="info-card" class="flex flex-col items-center leading-loose">
+                        <h3 id="title-card-1" class="text-2xl"></h3>
+                        <p id="p-card-1" class="text-center"></p>
+                        <div id="price-more" class="flex justify-between items-center gap-4">
+                            <p id="price-1"></p>
+                            <a href="" id="more-0">
+                                <p class="bg-stone-300 hover:bg-slate-800 ease-linear duration-300 hover:text-stone-300 rounded-full p-1">see more</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-neutral-400 flex justify-center hover:p-4 hover:rounded-2xl hover:bg-gradient-to-r from-pink-900 to-pink-300">
+                <div class="bg-rose-300 w-80 h-96 rounded-full">
+                    <figure>
+                        <img id="img-2" class="max-w-2xs">
+                    </figure>
+                    <div id="info-card" class="flex flex-col items-center leading-loose">
+                        <h3 id="title-card-2" class="text-2xl"></h3>
+                        <p id="p-card-2" class="text-center"></p>
+                        <div id="price-more" class="flex justify-between items-center gap-4">
+                            <p id="price-2"></p>
+                            <a href="" id="more-0">
+                                <p class="bg-stone-300 hover:bg-slate-800 ease-linear duration-300 hover:text-stone-300 rounded-full p-1">see more</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-neutral-400 flex justify-center hover:p-4 hover:rounded-2xl hover:bg-gradient-to-r from-pink-900 to-pink-300">
+                <div class="bg-rose-300 w-80 h-96 rounded-full">
+                    <figure>
+                        <img id="img-3" class="max-w-2xs">
+                    </figure>
+                    <div id="info-card" class="flex flex-col items-center leading-loose">
+                        <h3 id="title-card-3" class="text-2xl"></h3>
+                        <p id="p-card-3" class="text-center"></p>
+                        <div id="price-more" class="flex justify-between items-center gap-4">
+                            <p id="price-3"></p>
+                            <a href="" id="more-0">
+                                <p class="bg-stone-300 hover:bg-slate-800 ease-linear duration-300 hover:text-stone-300 rounded-full p-1">see more</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="bg-neutral-400 flex justify-center hover:p-4 hover:rounded-2xl hover:bg-gradient-to-r from-pink-900 to-pink-300">
+                <div class="bg-rose-300 w-80 h-96 rounded-full">
+                    <figure>
+                        <img id="img-4" class="max-w-2xs">
+                    </figure>
+                    <div id="info-card" class="flex flex-col items-center leading-loose">
+                        <h3 id="title-card-4" class="text-2xl"></h3>
+                        <p id="p-card-4" class="text-center w-72"></p>
+                        <div id="price-more" class="flex justify-between items-center gap-4">
+                            <p id="price-4"></p>
+                            <a href="" id="more-0">
+                                <p class="bg-stone-300 hover:bg-slate-800 ease-linear duration-300 hover:text-stone-300 rounded-full p-1">see more</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="bg-neutral-400 flex justify-center hover:p-4 hover:rounded-2xl hover:bg-gradient-to-r from-pink-900 to-pink-300">
+                <div class="bg-rose-300 w-80 h-96 rounded-full">
+                    <figure>
+                        <img id="img-5" class="max-w-2xs">
+                    </figure>
+                    <div id="info-card" class="flex flex-col items-center leading-loose">
+                        <h3 id="title-card-5" class="text-2xl"></h3>
+                        <p id="p-card-5" class="text-center w-72"></p>
+                        <div id="price-more" class="flex justify-between items-center gap-4">
+                            <p id="price-5"></p>
+                            <a href="" id="more-0">
+                                <p class="bg-stone-300 hover:bg-slate-800 ease-linear duration-300 hover:text-stone-300 rounded-full p-1">see more</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="bg-neutral-400 flex justify-center hover:p-4 hover:rounded-2xl hover:bg-gradient-to-r from-pink-900 to-pink-300">
+                <div class="bg-rose-300 w-80 h-96 rounded-full">
+                    <figure>
+                        <img id="img-6" class="max-w-2xs">
+                    </figure>
+                    <div id="info-card" class="flex flex-col items-center leading-loose">
+                        <h3 id="title-card-6" class="text-2xl"></h3>
+                        <p id="p-card-6" class="text-center"></p>
+                        <div id="price-more" class="flex justify-between items-center gap-4">
+                            <p id="price-6"></p>
+                            <a href="" id="more-0">
+                                <p class="bg-stone-300 hover:bg-slate-800 ease-linear duration-300 hover:text-stone-300 rounded-full p-1">see more</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    <footer class="flex w-full items-center">
+        <div class="flex w-1/2 justify-start gap-4 items-center" id="social-media">            
+            <a class="hover:relative hover:bottom-5"><img src="../image/instagram-icon.svg" alt="Instagram"></a>
+            <a class="hover:relative hover:bottom-5"><img src="../image/facebook-icon.svg" alt="Facebook"></a>
+            <a class="hover:relative hover:bottom-5"><img src="../image/whatsapp-icon.svg" alt="Whatsapp" id="whatsapp-icon"></a>
+        </div>
+    <!-- Copy Right: Sergio Torres Fernández -->
+        <div class="flex w-1/2 justify-start items-center" id="copyright">
+            <img src="../image/s.png" alt="s"><p class="mr-2">ergio</p>
+            <img src="../image/p.png" alt="p"><p>aulo</p>
+        </div>
+        <p class="mr-4">Cohort</p>
+    </footer>
+    
+    <script src="../upComing/data-up-coming.js
+    "></script>    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Probando tailwind</title>
+</head>
+<body>
+
+ <!-- Headder -->
+    <header class="">
+    <div class="flex flex-row justify-between items-center bg-gradient-to-r from-amber-100 to-pink-900">
+        <a href="./index.html">
+            <figure>
+                <img src="../image/LogoAmazingEvents.png" alt="Logo Amazing Events" class="w-96">
+            </figure>
+        </a>
+        <nav class="flex flex-row gap-4 mr-8">
+            <a href="../index/index.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Home</a> 
+            <a href="../upComing/up-coming.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Upcoming Events</a>
+            <a href="../pastEvents/past-events.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Past Events</a>   
+            <a href="../contact/contact.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Conctact</a>   
+            <a href="../stats/stats.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Stats</a>    
+        </nav>
+    </div>
+    <div id="title" class="flex flex-row justify-between mt-4">
+        <a href="../pastEvents/past-events.html">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 ease-linear duration-300 hover:w-9">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+        </a>
+        <h1 class="text-3xl uppercase font-medium">contact</h1>
+        <a href="../stats/stats.html">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 ease-linear duration-300 hover:w-9">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </a>
+    </div>
+    </header>
+        <div id="bg-container" class="mt-10 mb-10 gap-4 flex flex-wrap justify-center">
+            <div class="w-2/5">
+
+                <form action="../contact/show-data.html" method="GET" class="flex flex-col items-stretch gap-8 p-4 w-full ease-in duration-300 hover:bg-gradient-to-l from-pink-400 to-neutral-300 hover:p-8 hover:rounded-2xl">
+    
+                    <label class="flex flex-col text-xl">
+                        <span class="mb-2">Name:</span>
+                        <input type="text" name="name" id="name">
+                    </label>
+    
+                    <label class="flex flex-col text-xl">
+                        <span class="mb-2">Email:</span>
+                        <input type="email" name="email" id="email">
+                    </label>
+    
+                    <label class="flex flex-col text-xl">
+                        <span class="mb-2">Message: </span>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </label>
+    
+                    <input type="submit" id="submit" class="text-xl bg-stone-300 hover:bg-green-600 hover:text-stone-100">
+                </form>
+            </div>     
+        </div>
+    <footer class="flex w-full items-center">
+        <div class="flex w-1/2 justify-start gap-4 items-center" id="social-media">            
+            <a class="hover:relative hover:bottom-5"><img src="../image/instagram-icon.svg" alt="Instagram"></a>
+            <a class="hover:relative hover:bottom-5"><img src="../image/facebook-icon.svg" alt="Facebook"></a>
+            <a class="hover:relative hover:bottom-5"><img src="../image/whatsapp-icon.svg" alt="Whatsapp" id="whatsapp-icon"></a>
+        </div>
+    <!-- Copy Right: Sergio Torres Fernández -->
+        <div class="flex w-1/2 justify-start items-center" id="copyright">
+            <img src="../image/s.png" alt="s"><p class="mr-2">ergio</p>
+            <img src="../image/p.png" alt="p"><p>aulo</p>
+        </div>
+        <p class="mr-4">Cohort</p>
+    </footer>
+
+    <script src="""></script>    
+</body>
+</html>

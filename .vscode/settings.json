@@ -1,0 +1,7 @@
+{
+    "editor.fontFamily": "Cascadia code, 'Courier New', monospace",
+    "console-ninja.toolsToEnableSupportAutomaticallyFor": {
+        "live-server": true,
+        "live-preview": true
+    }
+}
