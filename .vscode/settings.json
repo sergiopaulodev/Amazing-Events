@@ -3,5 +3,6 @@
     "console-ninja.toolsToEnableSupportAutomaticallyFor": {
         "live-server": true,
         "live-preview": true
-    }
+    },
+    "liveServer.settings.port": 5502
 }
