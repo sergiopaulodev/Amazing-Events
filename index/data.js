@@ -185,11 +185,12 @@ function makeCards(array) {
   for (let evento of array) {
         let div = document.createElement('div')
         div.className = 'bg-neutral-400 flex justify-center ease-in duration-300 hover:p-4 hover:rounded-2xl hover:bg-gradient-to-r from-pink-900 to-pink-300'
+        div.id = 'card-bg'
         divBackground.appendChild(div)
 
         let divCont = document.createElement('div')
         divCont.id = 'card-container'
-        divCont.className = 'bg-rose-300 w-80 h-96 rounded-full'
+        divCont.className = 'bg-rose-300 w-80 rounded-full'
         div.appendChild(divCont);
 
         let figure = document.createElement('figure')
@@ -201,7 +202,7 @@ function makeCards(array) {
         figure.appendChild(img)
         let divInfo = document.createElement('div')
         divInfo.id = 'info'
-        divInfo.className = 'flex flex-col items-center leading-loose'
+        divInfo.className = 'flex flex-col items-center gap-3'
         divCont.appendChild(divInfo)
 
         let title = document.createElement('h3')
@@ -210,7 +211,7 @@ function makeCards(array) {
         title.innerHTML = evento.name
         divInfo.appendChild(title)
         let text = document.createElement('p')
-        text.className = 'text-center'
+        text.className = 'text-center mx-6'
         text.innerHTML = evento.description
         divInfo.appendChild(text)
         let divPm = document.createElement('div')
@@ -220,6 +221,7 @@ function makeCards(array) {
 
         let price = document.createElement('p')
         price.id = 'price'
+        price.className = 'uppercase font-semibold text-xl'
         price.innerHTML = `$ ${evento.price}`
         divPm.appendChild(price)
         let link = document.createElement('a')
