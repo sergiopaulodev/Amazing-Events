@@ -8,20 +8,6 @@ body {
     background: linear-gradient(rgba(169, 240, 209, 0.5),rgba(255, 126, 107, 0.8));
 }
 
-#p-card-1 {
-    width: 15rem;
-    line-height: 1.5rem;
-}
-#p-card-8, #p-card-9, #p-card-10, #p-card-11, #p-card-13 {
-    width: 18rem;
-}
-#bg-container > div {
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.45);
-}
-#bg-container > div:hover {
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.85);
-    transition: 0.4s ease;
-}
 nav > a:hover {
     background-color: black;
     color: aliceblue;
@@ -35,4 +21,10 @@ tr, th, td{
 #whatsapp-icon {
     width: 38px;
 
+}
+#card-container {
+    height: 26rem;
+}
+#card-bg{
+    height: 28rem;
 }
