@@ -5,42 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Probando tailwind</title>
 </head>
 <body>
     <header>
-    <div class="flex flex-row justify-between items-center bg-gradient-to-r from-amber-100 to-pink-900">
+    <div id="logo-nav" class="flex flex-row justify-between items-center bg-gradient-to-r from-amber-100 to-pink-900">
         <a href="./index.html">
             <figure>
-                <img src="../image/LogoAmazingEvents.png" alt="Logo Amazing Events" class="w-96">
+                <img src="./image/LogoAmazingEvents.png" alt="Logo Amazing Events" class="w-96 mb-4">
             </figure>
         </a>
         <nav class="flex flex-row gap-4 mr-8">
-            <a href="../index/index.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Home</a> 
-            <a href="../upComing/up-coming.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Upcoming Events</a>
-            <a href="../pastEvents/past-events.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Past Events</a>   
-            <a href="../contact/contact.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Conctact</a>   
-            <a href="../stats/stats.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Stats</a>    
+            <a href="./index.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Home</a> 
+            <a href="./up-coming.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Upcoming Events</a>
+            <a href="./past-events.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Past Events</a>   
+            <a href="./contact.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Conctact</a>   
+            <a href="./stats.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Stats</a>    
         </nav>
     </div>
     <div id="title" class="flex flex-row justify-between mt-4">
-        <a href="../index/index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 ease-linear duration-300 hover:w-9">
+        <a id="disabled" aria-disabled="true" >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 opacity-50">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
         </a>
-        <h1 class="text-3xl uppercase font-medium">Up coming Events</h1>
-        <a href="../pastEvents/past-events.html">
+        <h1 class="text-3xl uppercase font-medium">Home</h1>
+        <a href="./up-coming.html">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 ease-linear duration-300 hover:w-9">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>
         </a>
     </div>
-    <div class="flex flex-row justify-between gap-10 mt-4">
-
-        <!-- checkbox area -->
+    <div id="category-search" class="flex flex-row justify-between gap-10 mt-4">
         <div class="flex w-3/5 justify-around" id="checkbox">
             <label>
                 <input type="checkbox" id="cbox1" value="cat-1">
@@ -71,12 +69,12 @@
     </div>
     </header>
     <div id="card-background">
-    </div> 
+    </div>    
     <footer class="flex w-full items-center">
         <div class="flex w-1/10 justify-start gap-4 items-center" id="social-media">            
-            <a class="hover:relative hover:bottom-5"><img src="../image/instagram-icon.svg" alt="Instagram"></a>
-            <a class="hover:relative hover:bottom-5"><img src="../image/facebook-icon.svg" alt="Facebook"></a>
-            <a class="hover:relative hover:bottom-5"><img src="../image/whatsapp-icon.svg" alt="Whatsapp" id="whatsapp-icon"></a>
+            <a class="hover:relative hover:bottom-5"><img src="./image/instagram-icon.svg" alt="Instagram"></a>
+            <a class="hover:relative hover:bottom-5"><img src="./image/facebook-icon.svg" alt="Facebook"></a>
+            <a class="hover:relative hover:bottom-5"><img src="./image/whatsapp-icon.svg" alt="Whatsapp" id="whatsapp-icon"></a>
         </div>   
         <div class="flex justify-center items-center w-4/5" id="copyright">
             <p>Torres Fernández Sergio | © Mind Hub 2023 | Bahía Blanca, Buenos Aires, Argentina</p>
@@ -84,8 +82,14 @@
         <p class="mr-4 w-1/10">Cohort</p>
         
     </footer>
-    
-    <script src="../upComing/data-up-coming.js
-    "></script>    
+
+     <!-- Copy Right: Sergio Torres Fernández -->
+        <!-- <div class="flex w-1/2 justify-start items-center" id="copyright">
+            <img src="../image/s.png" alt="s"><p class="mr-2 text-xs">ergio</p>
+            <img src="../image/p.png" alt="p"><p>aulo</p>
+            class="flex flex-col items-center"
+        </div> -->
+
+    <script src="./scripts/data.js"></script>    
 </body>
 </html>
