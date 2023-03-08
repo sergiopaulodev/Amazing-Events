@@ -11,20 +11,42 @@
 </head>
 <body>
     <header>
-    <div id="logo-nav" class="flex flex-row justify-between items-center bg-gradient-to-r from-amber-100 to-pink-900">
-        <a href="./index.html">
-            <figure>
-                <img src="./image/LogoAmazingEvents.png" alt="Logo Amazing Events" class="w-96 mb-4">
-            </figure>
-        </a>
-        <nav class="flex flex-row gap-4 mr-8">
-            <a href="./index.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Home</a> 
-            <a href="./up-coming.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Upcoming Events</a>
-            <a href="./past-events.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Past Events</a>   
-            <a href="./contact.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Conctact</a>   
-            <a href="./stats.html" class="bg-gray-300 w-33 h-9 px-5 pt-1 rounded-full items-center">Stats</a>    
+        <nav class="nav">
+            <div class="nav-container flex flex-row justify-between items-center bg-gradient-to-r from-amber-100 to-pink-900">
+                <div class="nav-logo">
+                    <a href="./index.html">
+                        <figure>
+                            <img src="./image/LogoAmazingEvents.png" alt="Logo Amazing Events" class="w-96 mb-4">
+                        </figure>
+                    </a>
+                </div>
+        
+                <label for="menu" class="nav-label">
+                    <img class="nav-img"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)">
+                        <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+                    </svg>
+                </label>
+        
+                <input class="nav-input" type="checkbox" id="menu">
+                <div class="nav__menu">
+                    <a href="./index.html" class="nav__item">Home</a>
+                    <a href="./up-coming.html" class="nav__item">Upcoming</a>
+                    <a href="./past-events.html" class="nav__item">Past</a>
+                    <a href="./contact.html" class="nav__item">Contact</a>
+                    <a href="./stats.html" class="nav__item">Stats</a>
+                </div>
+        
+                <div class="nav-menu flex gap-4">
+                    <a href="./index.html" class="nav-item bg-gray-300 px-5  rounded-full items-center">Home</a>
+                    <a href="./up-coming.html" class="nav-item bg-gray-300 px-5  rounded-full items-center">Upcoming Events</a>
+                    <a href="./past-events.html" class="nav-item bg-gray-300 px-5  rounded-full items-center">Past Events</a>
+                    <a href="./contact.html" class="nav-item bg-gray-300 px-5  rounded-full items-center">Conctact</a>
+                    <a href="./stats.html" class="nav-item bg-gray-300 px-5  rounded-full items-center">Stats</a>
+                </div>
+        
+            </div>
         </nav>
-    </div>
+
     <div id="title" class="flex flex-row justify-between mt-4">
         <a id="disabled" aria-disabled="true" >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 opacity-50">
@@ -40,27 +62,12 @@
     </div>
     <div id="category-search" class="flex flex-row justify-between gap-10 mt-4">
         <div class="flex w-3/5 justify-around" id="checkbox">
-            <label>
-                <input type="checkbox" id="cbox1" value="cat-1">
-                <span>Catergoria 1</span>
-            </label>
-            <label>
-                <input type="checkbox" id="cbox2" value="cat-2">
-                <span>Catergoria 2</span>
-            </label>
-            <label>
-                <input type="checkbox" id="cbox3" value="cat-3">
-                <span>Catergoria 3</span>
-            </label>
-            <label>
-                <input type="checkbox" id="cbox4" value="cat-4">
-                <span>Catergoria 4</span>
-            </label>
+            
         </div>
         <!-- Search area -->
         <label class="flex flex-row justify-between w-2/5 gap-2" id="search">
-            <input type="search" class="w-full ease-in duration-300 hover:p-2">
-            <span class="ease-in duration-300 hover:bg-slate-500 hover:p-2">
+            <input type="search" class="w-full ease-in duration-300 hover:p-2" id="search-input">
+            <span class="ease-in duration-300 hover:bg-slate-500 hover:p-2" id="search-button">
                 <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20">
                     <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
@@ -69,27 +76,22 @@
     </div>
     </header>
     <div id="card-background">
-    </div>    
+    </div>
     <footer class="flex w-full items-center">
-        <div class="flex w-1/10 justify-start gap-4 items-center" id="social-media">            
+        <div class="flex w-1/10 justify-start gap-4 items-center" id="social-media">
             <a class="hover:relative hover:bottom-5"><img src="./image/instagram-icon.svg" alt="Instagram"></a>
             <a class="hover:relative hover:bottom-5"><img src="./image/facebook-icon.svg" alt="Facebook"></a>
             <a class="hover:relative hover:bottom-5"><img src="./image/whatsapp-icon.svg" alt="Whatsapp" id="whatsapp-icon"></a>
-        </div>   
+        </div>
         <div class="flex justify-center items-center w-4/5" id="copyright">
             <p>Torres Fernández Sergio | © Mind Hub 2023 | Bahía Blanca, Buenos Aires, Argentina</p>
         </div>
         <p class="mr-4 w-1/10">Cohort</p>
-        
+
     </footer>
 
-     <!-- Copy Right: Sergio Torres Fernández -->
-        <!-- <div class="flex w-1/2 justify-start items-center" id="copyright">
-            <img src="../image/s.png" alt="s"><p class="mr-2 text-xs">ergio</p>
-            <img src="../image/p.png" alt="p"><p>aulo</p>
-            class="flex flex-col items-center"
-        </div> -->
 
-    <script src="./scripts/data.js"></script>    
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
