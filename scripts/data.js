@@ -180,12 +180,12 @@ let currentDate = new Date(data.currentDate) //fecha de referencia en formato ob
 function makeCards(array) {
 
   let divBackground = document.getElementById('card-background')
-
+  divBackground.innerHTML = ''
   divBackground.className = 'mt-10 mb-10 gap-4 flex flex-wrap justify-center'
   for (let evento of array) {
         let div = document.createElement('div')
         div.className = 'bg-neutral-400 flex justify-center ease-in duration-300 hover:p-4 hover:rounded-2xl hover:bg-gradient-to-r from-pink-900 to-pink-300'
-        div.id = 'card-bg'
+        div.id = `${evento._id}`
         divBackground.appendChild(div)
 
         let divCont = document.createElement('div')
@@ -194,7 +194,7 @@ function makeCards(array) {
         div.appendChild(divCont);
 
         let figure = document.createElement('figure')
-        figure.id = 'img-container'
+        figure.id = `img-container-${evento._id}`
         divCont.appendChild(figure)
 
         let img = document.createElement('img')
@@ -226,6 +226,7 @@ function makeCards(array) {
         divPm.appendChild(price)
         let link = document.createElement('a')
         link.id = 'more'
+        link.href = `./details.html?id=${evento._id}`
         divPm.appendChild(link)
 
         let seeMore = document.createElement('p')
@@ -235,4 +236,127 @@ function makeCards(array) {
   }
 }
 
-makeCards(eventos);
+function makeCategoriesButtons(){
+
+  let catContainer = document.getElementById('checkbox')
+
+  for (let category of categories){
+    
+    let catLabel = document.createElement('label')
+    catLabel.className = 'cat-label'
+
+    let inputCheck = document.createElement('input')
+    inputCheck.type = 'checkbox'
+    inputCheck.className = 'cat-input'
+    inputCheck.id = category.replace(' ','').toLowerCase()
+    inputCheck.value = category
+    catLabel.appendChild(inputCheck)
+
+    let spanCat = document.createElement('span')
+    spanCat.innerText = category
+    catLabel.appendChild(spanCat)
+
+    catContainer.appendChild(catLabel)
+    
+  }
+}
+
+
+function filtrar() {
+
+  let acumulador = []
+ 
+  arrCatInputs.map(input =>{
+    if(input.checked){
+      acumulador.push(input.value)
+    }
+  })
+
+  let eventosFiltrados = []
+  eventos.filter(evento => {
+    if (acumulador.includes(evento.category)){
+      eventosFiltrados.push(evento)
+    }
+  })
+  
+  
+  
+  if(acumulador.length > 0) {
+    makeCards(eventosFiltrados)
+  
+  }else{
+    makeCards(eventos)
+  }
+
+}
+
+function search(e) {
+  searchValue = e.target.value
+  searchValue = searchValue.toLowerCase().trim().replace(' ','')
+  if(e.target.value == ''){
+    makeCards(eventos)
+  }
+}
+
+function finalFilter() {
+
+  let catChecked = []
+
+  arrCatInputs.map(input =>{
+    if(input.checked){
+      catChecked.push(input.value)
+    }
+  })
+
+
+  let filtradosUnicos = []
+ 
+  if (catChecked.length && searchValue.length) {
+    eventos.filter(evento => {
+      if ((catChecked.includes(evento.category)) 
+      && 
+      (evento.name.toLowerCase().trim().replace(' ','').includes(searchValue) || evento.description.toLowerCase().trim().includes(searchValue))){
+        filtradosUnicos.push(evento)
+      }
+    })
+
+    console.log(filtradosUnicos);
+
+    if(filtradosUnicos.length === 0){
+      makeCards(eventos)
+    }else{
+      makeCards(filtradosUnicos)
+    }
+  }
+  else if(catChecked.length && !searchValue.length) {
+
+    eventos.filter(evento =>{
+      if(catChecked.includes(evento.category)){
+        filtradosUnicos.push(evento)
+      }
+    })
+    console.log(filtradosUnicos);
+
+    if(filtradosUnicos === 0){
+      makeCards(eventos)
+    }else{
+      makeCards(filtradosUnicos)
+    }
+  
+  }
+  else if(!catChecked.length && searchValue.length) {
+
+    eventos.filter(evento =>{
+      if ((evento.name.toLowerCase().trim().replace(' ','').includes(searchValue)) || evento.description.toLowerCase().trim().includes(searchValue)) {
+        filtradosUnicos.push(evento)
+      }
+    })
+    console.log(filtradosUnicos);
+    
+    if(filtradosUnicos == 0){
+      makeCards(eventos)
+    }else{
+      makeCards(filtradosUnicos)
+    }
+  }
+}
