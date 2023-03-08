@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Probando tailwind</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav-container flex flex-row justify-between items-center bg-gradient-to-r from-amber-100 to-pink-900">
+                <div class="nav-logo">
+                    <a href="./index.html">
+                        <figure>
+                            <img src="./image/LogoAmazingEvents.png" alt="Logo Amazing Events" class="w-96 mb-4">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="container-details">
+    </div>
+    
+    <footer class="flex w-full items-center">
+        <div class="flex w-1/10 justify-start gap-4 items-center" id="social-media">
+            <a class="hover:relative hover:bottom-5"><img src="./image/instagram-icon.svg" alt="Instagram"></a>
+            <a class="hover:relative hover:bottom-5"><img src="./image/facebook-icon.svg" alt="Facebook"></a>
+            <a class="hover:relative hover:bottom-5"><img src="./image/whatsapp-icon.svg" alt="Whatsapp" id="whatsapp-icon"></a>
+        </div>
+        <div class="flex justify-center items-center w-4/5" id="copyright">
+            <p>Torres Fernández Sergio | © Mind Hub 2023 | Bahía Blanca, Buenos Aires, Argentina</p>
+        </div>
+        <p class="mr-4 w-1/10">Cohort</p>
+
+    </footer>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/details.js"></script>
+</body>
+</html>
