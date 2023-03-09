@@ -26,6 +26,9 @@ let containerDetails = document.getElementById('container-details')
 
 function makeDetailCard(objeto) {
 
+        let browserTab = document.querySelector('title')
+        browserTab.innerHTML = evento.name
+
         let divMain = document.createElement('div')
         divMain.id = 'main-details'
         containerDetails.appendChild(divMain)
