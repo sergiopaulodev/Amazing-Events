@@ -176,6 +176,8 @@ let eventos = data.events //arreglo de objetos
 
 let currentDate = new Date(data.currentDate) //fecha de referencia en formato objet date
 
+
+
 // Imprime cards a partir de un array
 function makeCards(array) {
 
@@ -236,6 +238,13 @@ function makeCards(array) {
   }
 }
 
+let categories = []
+
+eventos.forEach( evento => {
+  if (!categories.includes(evento.category)) {
+      categories.push(evento.category);
+  }
+})
 function makeCategoriesButtons(){
 
   let catContainer = document.getElementById('checkbox')
@@ -281,7 +290,7 @@ function filtrar() {
   
   
   
-  if(acumulador.length > 0) {
+  if(acumulador.length) {
     makeCards(eventosFiltrados)
   
   }else{
@@ -323,7 +332,7 @@ function finalFilter() {
     console.log(filtradosUnicos);
 
     if(filtradosUnicos.length === 0){
-      makeCards(eventos)
+      notFound()
     }else{
       makeCards(filtradosUnicos)
     }
@@ -338,7 +347,7 @@ function finalFilter() {
     console.log(filtradosUnicos);
 
     if(filtradosUnicos === 0){
-      makeCards(eventos)
+      notFound()
     }else{
       makeCards(filtradosUnicos)
     }
@@ -354,9 +363,18 @@ function finalFilter() {
     console.log(filtradosUnicos);
     
     if(filtradosUnicos == 0){
-      makeCards(eventos)
+      notFound()
     }else{
       makeCards(filtradosUnicos)
     }
   }
+}
+
+function notFound() {
+  let divBackground = document.getElementById('card-background')
+  divBackground.innerHTML = ''
+  let cartelNotFoud = document.createElement('p')
+  cartelNotFoud.innerHTML = 'No se encuentra coincidencia, intente filtrar por categoria'
+  cartelNotFoud.className = 'text-2xl'
+  divBackground.appendChild(cartelNotFoud)
 }

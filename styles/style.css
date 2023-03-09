@@ -354,28 +354,36 @@ tr, th, td{
     object-fit: cover;
     transition: .5s ease;
     border-radius: 2rem;
+    max-width: 50%;
+    
 }
 #img-details:hover{
     /* box-shadow: black 2px 2px 10px;   */
     padding: 2rem; 
+    box-shadow: 0px 2px 40px 8px;
 }
 #fig-details{
-    align-self: center;
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 #main-details{
     height: 80vh;
 }
 #cont-fig-details{
-    background-color: hotpink;
+    background-color: rgb(236, 132, 132);
     display: flex;
     border-radius: 2rem;
-    width: 50%;
+    max-width: 50rem;
+
 }
 #cont-info-details{
     
     display: flex;
     align-items: center;
-    background-color: hotpink;
+    background-color: rgb(236, 132, 132);
     color:#ffffff;
     border-radius: 2rem;
     width: 50%;
@@ -390,4 +398,8 @@ tr, th, td{
 }
 footer{
     height: 10vh;
+}
+#back{
+    display: flex;
+    justify-content: center;
 }

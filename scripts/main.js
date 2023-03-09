@@ -2,12 +2,6 @@ makeCards(eventos);
 
 // -------------------------- botones de categoria dinamicos -------------------------
 
-let categories = []
-eventos.forEach( evento => {
-  if (!categories.includes(evento.category)) {
-      categories.push(evento.category);
-  }
-})
 makeCategoriesButtons(categories)
 
 // ------------------------------------------------------------------------------------

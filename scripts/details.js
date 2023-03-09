@@ -77,14 +77,24 @@ function makeDetailCard(objeto) {
         capacity.innerHTML = `capacity: ${evento.capacity}`
         divInfo.appendChild(capacity)
         
+        if(evento.hasOwnProperty('assistance')){
+                let assistance = document.createElement('p')
+                assistance.innerHTML = `assistance: ${evento.assistance}`
+                divInfo.appendChild(assistance)
+        }else{
+                let estimate = document.createElement('p')
+                estimate.innerHTML = `estimate: ${evento.estimate}`
+                divInfo.appendChild(estimate)     
+        }
+        
         let price = document.createElement('p')
         price.innerHTML = `price: $${evento.price}`
         divInfo.appendChild(price)
         
         let back = document.createElement('a')
-        back.innerHTML = 'volver a home'
+        back.innerHTML = 'volver'
         back.href = './index.html'
-        back.id = 'back-home'
+        back.id = 'back'
         divMain.appendChild(back)
 } 
 makeDetailCard(evento)
