@@ -37,6 +37,16 @@ tr, th, td{
     margin-top: 0.5rem;
     max-width: 85%;
 }
+#not-found {
+    height: 70vh;
+}
+
+.img-card {
+    max-width: 100%;
+    width: 20rem;
+    height: 12rem;
+    object-fit: cover;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 479px){
    .nav-container {
@@ -455,3 +465,4 @@ footer{
 
 
 }
+
