@@ -189,6 +189,8 @@ async function traerDatos() {
     let datos = await response.json() // lo que devuelve aplicarle .json a response es otra promesa, por eso uso "await"
     
     eventos = datos.events
+
+    console.log(eventos);
     makeCards(eventos)
     let categories = []
     eventos.forEach( evento => {

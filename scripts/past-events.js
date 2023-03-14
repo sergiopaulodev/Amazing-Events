@@ -2,7 +2,7 @@
 // use 'fut' para indicar FUTURO, use 'pas' para indicar PASADO
 let date
 let currentDate
-async function traerDatosUP() {
+async function traerDatosPast() {
   
   try {
 
@@ -71,4 +71,4 @@ function arrayFiltered(array, time) {
   
 }
 
-traerDatosUP()
+traerDatosPast()
