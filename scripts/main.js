@@ -1,32 +1,34 @@
-makeCards(eventos);
+// makeCards(eventos);
+// traerDatos()
+// makeCards(data.events)
 
 // -------------------------- botones de categoria dinamicos -------------------------
 
-makeCategoriesButtons(categories)
+// makeCategoriesButtons(categories)
 
-// ------------------------------------------------------------------------------------
 
-// Capturo los inputs con la clase .cat-input
-let catInputs = document.querySelectorAll('.cat-input')
+// ------------------------------------ filtrar por checked o !checked------------------------------------------------
 
-// Array de input.cat-input
-let arrCatInputs = Array.from(catInputs)
+// Capturo los inputs tipo checkbox
+
+
+// Convierto el NodeList en un array con Array.from()
+
 
 
 
 // cada input del array recibe el metodo .addEventListener y puede "escuchar" el cambio
-arrCatInputs.map( input => input.addEventListener('change', filtrar))
 
 // ------------------------------- Barra de busqueda ----------------------------------
 
-let searchInput = document.getElementById('search-input')
-let searchValue = ''
+// Escuchar lo que el usuario ingresa en la barra de busqueda: 
+//capturo el input de tipo search
+//declaro una variable (string) vacio para asignarle el valor de e.target
+//.addEventListener al input capturado
 
-searchInput.addEventListener('keyup', search)
-
-let searchButton = document.getElementById('search-button')
-searchButton.addEventListener('click', finalFilter)
+// let searchButton = document.getElementById('search-button')
+// searchButton.addEventListener('click', finalFilter)
 
 // -------------------------------------------------------------------------------------
 
-
+traerDatos()
