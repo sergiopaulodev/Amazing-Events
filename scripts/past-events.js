@@ -1,6 +1,6 @@
 // Me devuelte un array filtrado según se indique pasado o futuro
 // use 'fut' para indicar FUTURO, use 'pas' para indicar PASADO
-let date
+let date 
 let currentDate
 let eventosPasados
 async function traerDatosPast() {
@@ -34,6 +34,12 @@ async function traerDatosPast() {
     searchInput.addEventListener('keyup', searchPast)
     let searchButton = document.getElementById('search-button')
     searchButton.addEventListener('click', finalFilterPast)
+    //Escuchando enter
+    document.addEventListener('keypress', (e) => {
+      if(e.key === 'Enter') {
+        searchButton.click()
+      }
+    })
     
     console.log(pastEvent);
   }

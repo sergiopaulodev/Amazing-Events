@@ -35,6 +35,12 @@ async function traerDatos() {
     let searchButton = document.getElementById('search-button')
     searchButton.addEventListener('click', finalFilter)
 
+    //Escuchando enter
+    document.addEventListener('keypress', (e) => {
+      if(e.key === 'Enter') {
+        searchButton.click()
+      }
+    })
   }
 
   catch (error) {
