@@ -2,6 +2,7 @@
 // use 'fut' para indicar FUTURO, use 'pas' para indicar PASADO
 let date
 let currentDate
+let eventosPasados
 async function traerDatosPast() {
   
   try {
@@ -13,8 +14,8 @@ async function traerDatosPast() {
     eventos = datos.events
     currentDate = new Date(datos.currentDate)
 
-
-    makeCards(arrayFiltered(eventos, 'pas'))
+    eventosPasados = arrayFiltered(eventos, 'pas')
+    makeCards(eventosPasados)
 
     let categories = []
     eventos.forEach( evento => {
@@ -25,15 +26,16 @@ async function traerDatosPast() {
     makeCategoriesButtons(categories)
 
     catInputs = Array.from(document.querySelectorAll('.cat-input'))
-    catInputs.forEach( input => input.addEventListener('change', filtrar))
+    catInputs.forEach( input => input.addEventListener('change', filtrarPast))
 
     //barra de busqueda
 
     searchInput = document.getElementById('search-input')
-    searchInput.addEventListener('keyup', search)
+    searchInput.addEventListener('keyup', searchPast)
     let searchButton = document.getElementById('search-button')
-    searchButton.addEventListener('click', finalFilter)
-
+    searchButton.addEventListener('click', finalFilterPast)
+    
+    console.log(pastEvent);
   }
 
   catch (error) {
@@ -42,7 +44,6 @@ async function traerDatosPast() {
   
 
 }
-
 
 function arrayFiltered(array, time) {
 
@@ -69,6 +70,108 @@ function arrayFiltered(array, time) {
     }
     return arrFil
   
+}
+
+function filtrarPast() {
+
+  let acumulador = []
+ 
+  catInputs.map(input =>{
+    if(input.checked){
+      acumulador.push(input.value)
+    }
+  })
+
+  console.log(acumulador);
+
+  let eventosFiltrados = []
+  eventosPasados.filter(evento => {
+    if (acumulador.includes(evento.category)){
+      eventosFiltrados.push(evento)
+    }
+  })
+  
+  
+  
+  if(acumulador.length) {
+    makeCards(eventosFiltrados)
+  
+  }else{
+    makeCards(eventosPasados)
+  }
+
+}
+
+function searchPast(e) {
+  searchValue = e.target.value
+  searchValue = searchValue.toLowerCase().trim().replace(' ','')
+
+  if(e.target.value == ''){
+    finalFilterPast()
+  }
+}
+
+function finalFilterPast() {
+
+  let catChecked = []
+
+  catInputs.map(input =>{
+    if(input.checked){
+      catChecked.push(input.value)
+    }
+  })
+
+
+  let filtradosUnicos = []
+ 
+  if (catChecked.length && searchValue.length) {
+    eventosPasados.filter(evento => {
+      if ((catChecked.includes(evento.category)) 
+      && 
+      (evento.name.toLowerCase().trim().replace(' ','').includes(searchValue) || evento.description.toLowerCase().trim().includes(searchValue))){
+        filtradosUnicos.push(evento)
+      }
+    })
+
+
+    if(filtradosUnicos.length === 0){
+      notFound()
+    }else{
+      makeCards(filtradosUnicos)
+    }
+  }
+  else if(catChecked.length && !searchValue.length) {
+
+    eventosPasados.filter(evento =>{
+      if(catChecked.includes(evento.category)){
+        filtradosUnicos.push(evento)
+      }
+    })
+
+    if(filtradosUnicos === 0){
+      notFound()
+    }else{
+      makeCards(filtradosUnicos)
+    }
+  
+  }
+  else if(!catChecked.length && searchValue.length) {
+
+    eventosPasados.filter(evento =>{
+      if ((evento.name.toLowerCase().trim().replace(' ','').includes(searchValue)) || evento.description.toLowerCase().trim().includes(searchValue)) {
+        filtradosUnicos.push(evento)
+      }
+    })
+    
+    if(filtradosUnicos == 0){
+      notFound()
+    }else{
+      makeCards(filtradosUnicos)
+    }
+  }
+  else if(!catChecked.length && !searchValue){
+    makeCards(eventosPasados)
+  }
 }
 
 traerDatosPast()

@@ -1,17 +1,16 @@
 async function traerDatosDetails() {
-
-
+        
         try {
 
                 let response = await fetch(urlApi) // lo que me trae el método fetch es una promesa, por eso tengo que decirle que espere usando la palabra reservada "await"
-                
+
                 let datos = await response.json() // lo que devuelve aplicarle .json a response es otra promesa, por eso uso "await"
-                
+                        
                 eventos = datos.events
                 evento = eventos.find(evento => evento._id == id)
 
-
-                makeDetailCard(evento)
+                makeDetailCard(evento)             
+                
         }
 
         catch (error) {
@@ -19,35 +18,21 @@ async function traerDatosDetails() {
         }
 
 
-        }
-      
-
+}
 
 //Guardo en mi variable lo que se le manda por url y se guarda en location.search 
 let queryString = location.search
 
-// console.log(queryString);
-
-
 //Me permite usar metodos para poder obtener los valores que me llegan por url
-
 let param = new URLSearchParams(queryString)
 
-// console.log(param);
-
 //con el metodo get de la instancia creada arriba, saco el valor del id y lo guardo en una variable.
-
 const id = param.get('id')
-// console.log(id);
 
 //Me traigo y guardo en evento el evento cuyo id es el mismo que me llego por la search location
-
-
-
-
-
 let containerDetails = document.getElementById('container-details')
-function makeDetailCard(objeto) {
+
+function makeDetailCard(evento) {
 
         let browserTab = document.querySelector('title')
         browserTab.innerHTML = evento.name
@@ -91,9 +76,9 @@ function makeDetailCard(objeto) {
         description.innerHTML = evento.description
         divInfo.appendChild(description)
 
-        let date = document.createElement('p')
-        date.innerHTML = `date: ${evento.date}`
-        divInfo.appendChild(date)
+        let dateEvent = document.createElement('p')
+        dateEvent.innerHTML = `date: ${evento.date}`
+        divInfo.appendChild(dateEvent)
 
         let place = document.createElement('p')
         place.innerHTML = `place: ${evento.place}`
@@ -102,26 +87,30 @@ function makeDetailCard(objeto) {
         let capacity = document.createElement('p')
         capacity.innerHTML = `capacity: ${evento.capacity}`
         divInfo.appendChild(capacity)
+
         
         if(evento.hasOwnProperty('assistance')){
                 let assistance = document.createElement('p')
                 assistance.innerHTML = `assistance: ${evento.assistance}`
                 divInfo.appendChild(assistance)
-        }else{
+        }
+        else {
                 let estimate = document.createElement('p')
                 estimate.innerHTML = `estimate: ${evento.estimate}`
-                divInfo.appendChild(estimate)     
+                divInfo.appendChild(estimate) 
         }
         
         let price = document.createElement('p')
         price.innerHTML = `price: $${evento.price}`
         divInfo.appendChild(price)
-        
+
         let back = document.createElement('a')
-        back.innerHTML = 'volver'
-        back.href = './index.html'
-        back.id = 'back'
-        divMain.appendChild(back)
+                back.innerHTML = 'volver'
+                back.href = `${document.referrer}`
+                back.id = 'back'
+                divMain.appendChild(back)
+
+        
 } 
 
 traerDatosDetails()

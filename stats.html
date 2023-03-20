@@ -62,80 +62,51 @@
     </header>
     <div id="bg-container" class="mt-10 mb-10 gap-4 flex flex-wrap justify-center"> 
         <!-- TABLA -->
-        <div id="table" class="ease-in duration-300 hover:bg-slate-800 hover:p-2 hover:rounded-2xl">
-            <table class="border-collapse hover:bg-neutral-400">
-                <tbody class="">
+        <div id="table" class="ease-in duration-300 hover:bg-slate-800 hover:p-2 hover:rounded-2xl flex flex-col gap-12">
+           
+            <table class="border-collapse hover:bg-neutral-400 ease-in duration-200">
+                <tbody id="table-body">
                     <tr>
                         <th colspan="3" class="uppercase">Events statistics</th>
                     </tr>
                     <tr>
-                        <td class="">Events with the highest percentage of attendance</td>
-                        <td class="">Events with the lowest percentage of attendance</td>
-                        <td class="">Events with larger capacity</td>
+                        <th>Events with the highest percentage of attendance</td>
+                        <th>Events with the lowest percentage of attendance</td>
+                        <th>Events with larger capacity</td>
                     </tr>
-                    <tr>
-                        <td id="e-h-attendance"> - </td>
-                        <td id="e-l-attendance"> - </td>
-                        <td id="e-l-capacity"> - </td>
-                    </tr>
+                   
+                </tbody>
+            </table>
+            <table class="border-collapse hover:bg-neutral-400 w-full ease-in duration-200">
+                <tbody id="upcoming-stats">
                     <tr>
                         <th colspan="3" class="uppercase">Upcoming events statistics by category</th>
                     </tr>
                     <tr>
-                        <td class="">Categories</td>
-                        <td class="">Revenues</td>
-                        <td class="">Percentage of attendance</td>
+                        <th class="categories w-1/3">Categories</td>
+                        <th class="revenues w-1/3">Revenues</td>
+                        <th class="percentage w-1/3">Percentage of attendance</td>
                     </tr>
-                    <tr>
-                        <td> - </td>
-                        <td> - </td>
-                        <td> - </td>
-                    </tr>
-                    <tr>
-                        <td> - </td>
-                        <td> - </td>
-                        <td> - </td>
-                    </tr>
-                    <tr>
-                        <td> - </td>
-                        <td> - </td>
-                        <td> - </td>
-                    </tr>
+                    <!-- aca va la data -->
+
+                </tbody>
+            </table>
+            <table class="border-collapse hover:bg-neutral-400 w-full ease-in duration-200">
+                <tbody id="past-stats">
+                 
                     <tr>
                         <th colspan="3" class="uppercase">Past events statistics by category</th>
                     </tr>
                     <tr>
-                        <td class="">Categories</td>
-                        <td class="">Revenues</td>
-                        <td class="">Percentage of attendance</td>
+                        <th class="categories w-1/3">Categories</td>
+                        <th class="revenues w-1/3">Revenues</td>
+                        <th class="percentage w-1/3">Percentage of attendance</td>
                     </tr>
-                    <tr>
-                        <td> - </td>
-                        <td> - </td>
-                        <td> - </td>
-                    </tr>
-                    <tr>
-                        <td> - </td>
-                        <td> - </td>
-                        <td> - </td>
-                    </tr>
-                    <tr>
-                        <td> - </td>
-                        <td> - </td>
-                        <td> - </td>
-                    </tr>
-                    <tr>
-                        <td> - </td>
-                        <td> - </td>
-                        <td> - </td>
-                    </tr>
-                    <tr>
-                        <td> - </td>
-                        <td> - </td>
-                        <td> - </td>
-                    </tr>
+                    
                 </tbody>
-            </table>   
+            </table>
+                   
+    
         </div>        
     </div>
     <footer class="flex w-full items-center">
@@ -150,5 +121,9 @@
         <p class="mr-4 w-1/10">Cohort</p>
         
     </footer>
+
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/up-coming.js"></script>
+    <script src="./scripts/stats.js"></script>
 </body>
 </html>
