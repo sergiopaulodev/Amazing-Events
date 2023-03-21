@@ -66,6 +66,17 @@ async function traerDatosStats() {
         statsEvents()
         statsUpcoming(categories)
         statsPast(categories)
+        // --------------------Loader-------------------------------
+
+        let loader = document.querySelector('.loader');
+
+        loader.classList.add('loader-hidden');
+
+        loader.addEventListener('transition', () => {
+            document.body.removeChild('loader')
+        })
+        
+        // ----------------------------------------------------------
     }
     
     catch (error) {
@@ -246,4 +257,5 @@ function statsPast(array){
 }
 
 traerDatosStats()
+
 

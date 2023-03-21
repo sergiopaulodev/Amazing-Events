@@ -16,7 +16,20 @@ async function traerDatosUP() {
     currentDate = new Date(datos.currentDate)
 
     eventosFuturos = arrayFiltered(eventos, 'fut')
+
     makeCards(eventosFuturos)
+
+    // --------------------Loader-------------------------------
+
+    let loader = document.querySelector('.loader');
+
+    loader.classList.add('loader-hidden');
+
+    loader.addEventListener('transition', () => {
+        document.body.removeChild('loader')
+    })
+    
+    // ----------------------------------------------------------
 
     let categories = []
     eventos.forEach( evento => {
@@ -182,4 +195,5 @@ function finalFilterUp() {
 }
 
 traerDatosUP()
+
 

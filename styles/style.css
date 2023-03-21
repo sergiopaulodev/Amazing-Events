@@ -8,6 +8,46 @@ body {
     background: linear-gradient(rgba(169, 240, 209, 0.5),rgba(255, 126, 107, 0.8));
 }
 
+/* -------------------- Loader ------------- */
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    transition: opacity 0.75, visibility 0.75;
+}
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: '';
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: black;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+@keyframes loading {
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }    
+}
+
+/* ---------------------------------------- */
+
+
 .nav-menu > a:hover {
     background-color: black;
     color: aliceblue;
@@ -35,7 +75,7 @@ tr, th, td{
 }
 .nav-logo figure > img{
     margin-top: 0.5rem;
-    max-width: 85%;
+    max-width: 80%;
 }
 #not-found {
     height: 70vh;
@@ -52,7 +92,6 @@ tr, th, td{
    .nav-container {
     display: block;
     max-width: 479px;
-    /* padding-bottom: 1rem; */
    }
    
    .nav-container a {
@@ -61,6 +100,15 @@ tr, th, td{
    .nav-menu > a {
     display: none;
    }
+   .nav-logo figure {
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    }
+    .nav-logo figure > img {
+        margin-top: 0.5rem;
+        max-width: 80%;
+        margin-bottom: 2rem;
+    }
 
    .nav__menu {
     margin-top: 1rem;
@@ -99,6 +147,10 @@ tr, th, td{
     height: 28rem;
     max-width: 85%;
    }
+   #table{
+    margin-left: 1rem;
+    margin-right: 1rem;
+   }
    #copyright {
     text-align: center;
     font-size: .7rem;
@@ -119,6 +171,12 @@ tr, th, td{
     .nav-menu {
         display: none !important;
     }
+
+    .nav-logo figure {
+        margin-left: 1rem;
+        margin-top: 1.5rem;
+    }
+
    .nav__menu {
         margin-top: 1rem;
         margin-bottom: 1rem;
@@ -141,6 +199,10 @@ tr, th, td{
         margin-left: 1rem;
         margin-right: 1rem;
     }
+    #table{
+        margin-left: 1rem;
+        margin-right: 1rem;
+       }
     #copyright {
         text-align: center;
         font-size: 1rem;
@@ -164,13 +226,18 @@ tr, th, td{
         margin-right: 1rem;
         margin-left: 1rem;
     }
+    .nav-logo figure {
+        margin-left: 1rem;
+        margin-top: 1.5rem;
+    }
    
     .nav-menu {
+        margin-top: 1.5rem;
         margin-right: 1rem;
         margin-bottom: 1rem;
     }
     .nav-item {
-        height: 3.5rem;
+        height: 3rem;
         text-align: center;
         display: flex;
         align-items: center;
@@ -190,6 +257,10 @@ tr, th, td{
         margin-left: 2rem;
         margin-right: 2rem;
     }
+    #table{
+        margin-left: 1rem;
+        margin-right: 1rem;
+       }
     #copyright {
         text-align: center;
 
@@ -209,16 +280,26 @@ tr, th, td{
     .nav__menu {
         display: none;
     }
-    .nav-menu {
-        margin-right: 1rem;
+    .nav-logo figure {
         margin-left: 1rem;
+        margin-top: 1.5rem;
+    }
+   
+    .nav-menu {
+        margin-top: 1.5rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
     }
     .nav-item {
-        height: 3.5rem;
+        height: 3rem;
         text-align: center;
         display: flex;
         align-items: center;
     }
+    #table{
+        margin-left: 1rem;
+        margin-right: 1rem;
+       }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1328px) {
     .nav-container {
@@ -231,6 +312,10 @@ tr, th, td{
     .nav-logo > a {
         margin-right: 1rem;
         margin-left: 1rem;
+    }
+    .nav-logo figure {
+        margin-left: 1rem;
+        margin-top: 1.5rem;
     }
     .nav-menu {
         margin-right: 1rem;
@@ -247,8 +332,9 @@ tr, th, td{
         width: 80%;
     }
     tr, th, td {
-        font-size: 1rem;
+        font-size: 0.8rem;
         line-height: 1rem;
+        text-align: center;
     }
     
 }
@@ -257,14 +343,38 @@ tr, th, td{
         width: 50%;
     }
     tr, th, td {
-        font-size: 1.225rem;
+        font-size: 1rem;
         line-height: 1.7rem;
+        text-align: center;
     }
     
 }
 @media only screen and (min-width: 1324px) and (max-width: 1920px) {
     #contact {
         width: 60%;
+    }
+    tr, th, td {
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+        text-align: center;
+    }
+    .nav-menu {
+        margin-right: 2rem;
+    }
+    .nav-item {
+        height: 3rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    } 
+    .nav-logo figure {
+        margin-left: 1rem;
+        margin-top: 1.5rem;
+    }
+    .nav-logo figure > img {
+        margin-top: 0.5rem;
+        max-width: 80%;
+        margin-bottom: 2rem;
     }
     .nav__menu {
         display: none;

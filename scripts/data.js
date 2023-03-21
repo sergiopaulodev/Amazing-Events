@@ -17,6 +17,19 @@ async function traerDatos() {
 
     makeCards(eventos)
 
+    // --------------------Loader-------------------------------
+
+    let loader = document.querySelector('.loader');
+
+    loader.classList.add('loader-hidden');
+
+    loader.addEventListener('transition', () => {
+        document.body.removeChild('loader')
+    })
+    
+    // ----------------------------------------------------------
+
+
     let categories = []
     eventos.forEach( evento => {
       if (!categories.includes(evento.category)) {
@@ -41,14 +54,16 @@ async function traerDatos() {
         searchButton.click()
       }
     })
-  }
 
+  }
+  
   catch (error) {
     console.log(error);
   }
   
-
+  
 }
+
 
 // Imprime cards a partir de un array
 

@@ -9,7 +9,19 @@ async function traerDatosDetails() {
                 eventos = datos.events
                 evento = eventos.find(evento => evento._id == id)
 
-                makeDetailCard(evento)             
+                makeDetailCard(evento)
+                
+                // --------------------Loader-------------------------------
+
+                let loader = document.querySelector('.loader');
+
+                loader.classList.add('loader-hidden');
+
+                loader.addEventListener('transition', () => {
+                        document.body.removeChild('loader')
+                })
+                
+                // ----------------------------------------------------------
                 
         }
 
